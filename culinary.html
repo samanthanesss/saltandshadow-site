@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Culinary — Salt & Shadow</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #e7e3dc;
+      --text: #2e2e2e;
+      --muted: #8a8a8a;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      -webkit-font-smoothing: antialiased;
+      position: relative;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background: url('paper-texture.jpg');
+      opacity: 0.35;
+      pointer-events: none;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 120px 24px 100px;
+    }
+
+    .back {
+      font-size: 0.8rem;
+      letter-spacing: 0.15em;
+      color: var(--muted);
+      text-decoration: none;
+      display: inline-block;
+      margin-bottom: 60px;
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.4rem, 4vw, 2.8rem);
+      font-weight: 400;
+      margin-bottom: 14px;
+      color: #3b3b3b;
+    }
+
+    .intro {
+      font-size: 0.95rem;
+      color: var(--muted);
+      max-width: 520px;
+      line-height: 1.7;
+      margin-bottom: 80px;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+    }
+
+    .gallery img {
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      display: block;
+      filter: brightness(0.94) contrast(0.98) saturate(0.95);
+    }
+
+    @media (max-width: 768px) {
+      .gallery {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .container {
+        padding: 100px 20px 80px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <a href="index.html" class="back">← BACK</a>
+
+    <h1>Culinary</h1>
+
+    <div class="intro">
+      A study in restraint, texture, and composition.  
+      Food as atmosphere—built through detail, timing, and quiet intention.
+    </div>
+
+    <div class="gallery">
+      <img src="culinary1.jpg" alt="">
+      <img src="culinary2.jpg" alt="">
+      <img src="culinary3.jpg" alt="">
+      <img src="culinary4.jpg" alt="">
+    </div>
+  </div>
+
+</body>
+</html>
