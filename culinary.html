@@ -8,111 +8,98 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Inter:wght@300;400&display=swap" rel="stylesheet">
 
   <style>
-    :root {
-      --bg: #e7e3dc;
-      --text: #2e2e2e;
-      --muted: #8a8a8a;
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
     body {
+      margin: 0;
       font-family: 'Inter', sans-serif;
-      color: var(--text);
-      background: var(--bg);
-      -webkit-font-smoothing: antialiased;
-      position: relative;
-    }
-
-    body::before {
-      content: "";
-      position: fixed;
-      inset: 0;
-      background: url('paper-texture.jpg');
-      opacity: 0.35;
-      pointer-events: none;
+      background: #f5f3f0;
+      color: #2f2f2f;
+      line-height: 1.7;
     }
 
     .container {
-      max-width: 900px;
+      max-width: 720px;
       margin: 0 auto;
-      padding: 120px 24px 100px;
+      padding: 80px 20px;
     }
 
     .back {
-      font-size: 0.8rem;
-      letter-spacing: 0.15em;
-      color: var(--muted);
-      text-decoration: none;
+      font-size: 14px;
+      margin-bottom: 40px;
       display: inline-block;
-      margin-bottom: 60px;
+      text-decoration: none;
+      color: #7a7a7a;
+    }
+
+    .back:hover {
+      opacity: 0.6;
     }
 
     h1 {
       font-family: 'Playfair Display', serif;
-      font-size: clamp(2.4rem, 4vw, 2.8rem);
-      font-weight: 400;
-      margin-bottom: 14px;
-      color: #3b3b3b;
+      font-size: 42px;
+      margin-bottom: 30px;
     }
 
-    .intro {
-      font-size: 0.95rem;
-      color: var(--muted);
-      max-width: 520px;
-      line-height: 1.7;
-      margin-bottom: 80px;
+    .section {
+      margin-bottom: 40px;
     }
 
-    .gallery {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 28px;
+    p {
+      margin-bottom: 20px;
+      font-size: 16px;
+      color: #3a3a3a;
     }
 
-    .gallery img {
-      width: 100%;
-      aspect-ratio: 4 / 5;
-      object-fit: cover;
-      display: block;
-      filter: brightness(0.94) contrast(0.98) saturate(0.95);
+    .contact {
+      margin-top: 60px;
+      font-size: 15px;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(0,0,0,0.3);
+      padding-bottom: 2px;
+    }
+
+    a:hover {
+      opacity: 0.7;
     }
 
     @media (max-width: 768px) {
-      .gallery {
-        grid-template-columns: 1fr;
-        gap: 20px;
-      }
-
-      .container {
-        padding: 100px 20px 80px;
+      h1 {
+        font-size: 32px;
       }
     }
   </style>
 </head>
-<body>
 
+<body>
   <div class="container">
-    <a href="index.html" class="back">← BACK</a>
+
+    <a href="index.html" class="back">← Back</a>
 
     <h1>Culinary</h1>
 
-    <div class="intro">
-      A study in restraint, texture, and composition.  
-      Food as atmosphere—built through detail, timing, and quiet intention.
+    <div class="section">
+      <p>
+        Currently pursuing formal culinary training while building on a lifelong interest in cooking. Focused on developing technique, understanding texture, and refining presentation through both structured education and independent practice.
+      </p>
+
+      <p>
+        Seeking opportunities to gain real-world kitchen experience, contribute meaningfully at an entry level, and continue growing through hands-on work.
+      </p>
+
+      <p>
+        Available for food photography collaboration, recipe development, and culinary opportunities.
+      </p>
     </div>
 
-    <div class="gallery">
-      <img src="culinary1.jpg" alt="">
-      <img src="culinary2.jpg" alt="">
-      <img src="culinary3.jpg" alt="">
-      <img src="culinary4.jpg" alt="">
+    <div class="contact">
+      Samantha Piehoff<br>
+      <a href="mailto:samantha@saltandshadowco.com">samantha@saltandshadowco.com</a>
     </div>
+
   </div>
-
 </body>
 </html>
