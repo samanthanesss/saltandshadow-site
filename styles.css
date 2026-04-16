@@ -31,8 +31,7 @@ body.site-body {
   min-height: 100vh;
   font-family: "Inter", sans-serif;
   color: var(--text);
-  background:
-    radial-gradient(circle at top, rgba(198, 201, 212, 0.9), rgba(151, 154, 170, 0.96) 40%, rgba(139, 143, 159, 0.99) 100%);
+  background: #F2F1EF;
   position: relative;
 }
 
