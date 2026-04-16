@@ -9,10 +9,10 @@
 
   <style>
     :root {
-      --bg: #e9e6e1;
-      --paper: #f6f4f1;
-      --text: #2b2b2b;
-      --muted: #7d7d7d;
+      --bg: #e7e3dc;
+      --paper: #f4f1ed;
+      --text: #2e2e2e;
+      --muted: #8a8a8a;
     }
 
     * {
@@ -25,61 +25,71 @@
       font-family: 'Inter', sans-serif;
       color: var(--text);
       -webkit-font-smoothing: antialiased;
-      background:
-        radial-gradient(rgba(0,0,0,0.025) 1px, transparent 1px),
-        radial-gradient(rgba(0,0,0,0.02) 1px, transparent 1px),
-        var(--bg);
-      background-size: 3px 3px, 6px 6px, auto;
+      background: var(--bg);
+      position: relative;
+    }
+
+    /* Real texture overlay */
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background: url('paper-texture.jpg');
+      opacity: 0.35;
+      pointer-events: none;
+      z-index: 0;
     }
 
     .container {
-      max-width: 920px;
+      position: relative;
+      z-index: 1;
+      max-width: 900px;
       margin: 0 auto;
-      padding: 130px 24px 110px;
+      padding: 140px 24px 120px;
       text-align: center;
     }
 
     header {
-      margin-bottom: 90px;
+      margin-bottom: 100px;
     }
 
     h1 {
       font-family: 'Playfair Display', serif;
-      font-size: clamp(2.6rem, 4vw, 3.2rem);
+      font-size: clamp(2.5rem, 4vw, 3rem);
       font-weight: 400;
       letter-spacing: -0.01em;
-      margin-bottom: 16px;
-      color: #3a3a3a;
+      margin-bottom: 18px;
+      color: #3b3b3b;
     }
 
     .tagline {
       font-size: 1rem;
       color: var(--muted);
-      letter-spacing: 0.06em;
+      letter-spacing: 0.07em;
     }
 
     .grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 56px;
-      margin-bottom: 90px;
+      gap: 60px;
+      margin-bottom: 100px;
     }
 
     .card {
       background: var(--paper);
       box-shadow:
-        0 2px 4px rgba(0,0,0,0.04),
-        0 12px 30px rgba(0,0,0,0.08);
+        0 1px 2px rgba(0,0,0,0.05),
+        0 14px 35px rgba(0,0,0,0.08);
       text-decoration: none;
       color: inherit;
       transition: transform 0.25s ease, box-shadow 0.25s ease;
     }
 
     .card:hover {
-      transform: translateY(-4px);
+      transform: translateY(-3px);
       box-shadow:
-        0 4px 8px rgba(0,0,0,0.06),
-        0 18px 40px rgba(0,0,0,0.10);
+        0 4px 10px rgba(0,0,0,0.06),
+        0 20px 45px rgba(0,0,0,0.10);
     }
 
     .image-wrap {
@@ -92,63 +102,63 @@
       height: 100%;
       object-fit: cover;
       display: block;
+      filter: brightness(0.94) contrast(0.98) saturate(0.95);
     }
 
     .card-body {
-      padding: 22px 20px 26px;
-      text-align: center;
-      border-top: 1px solid rgba(0,0,0,0.04);
+      padding: 20px 18px 24px;
+      border-top: 1px solid rgba(0,0,0,0.035);
     }
 
     .card-title {
       font-family: 'Playfair Display', serif;
-      font-size: 1.55rem;
+      font-size: 1.5rem;
       font-weight: 400;
-      margin-bottom: 6px;
-      color: #3a3a3a;
+      margin-bottom: 4px;
+      color: #3b3b3b;
     }
 
     .card-sub {
-      font-size: 0.9rem;
+      font-size: 0.88rem;
       color: var(--muted);
       font-style: italic;
     }
 
     .divider {
-      width: 38px;
+      width: 34px;
       height: 1px;
-      background: #bfbfbf;
+      background: #c4c4c4;
       margin: 10px auto 0;
     }
 
     .about {
-      font-size: 0.75rem;
-      letter-spacing: 0.25em;
+      font-size: 0.72rem;
+      letter-spacing: 0.28em;
       color: var(--muted);
-      margin-bottom: 50px;
+      margin-bottom: 60px;
     }
 
     .footer {
       font-family: 'Playfair Display', serif;
-      font-size: 1.1rem;
-      line-height: 1.9;
+      font-size: 1.05rem;
+      line-height: 2;
       color: #3a3a3a;
     }
 
     .footer small {
       font-family: 'Inter', sans-serif;
-      font-size: 0.9rem;
+      font-size: 0.88rem;
       color: var(--muted);
     }
 
     @media (max-width: 768px) {
       .grid {
         grid-template-columns: 1fr;
-        gap: 42px;
+        gap: 44px;
       }
 
       .container {
-        padding: 100px 20px 90px;
+        padding: 110px 20px 100px;
       }
     }
   </style>
