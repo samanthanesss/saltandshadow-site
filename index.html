@@ -5,17 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Salt & Shadow</title>
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Inter:wght@300;400&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      --bg: #f5f3f0;
-      --text: #1a1a1a;
-      --muted: #6b6b6b;
-      --card-radius: 14px;
-      --shadow: 0 10px 30px rgba(0,0,0,0.06);
-      --shadow-hover: 0 16px 40px rgba(0,0,0,0.10);
+      --bg: #e9e6e1;
+      --paper: #f6f4f1;
+      --text: #2b2b2b;
+      --muted: #7d7d7d;
     }
 
     * {
@@ -26,117 +23,132 @@
 
     body {
       font-family: 'Inter', sans-serif;
-      background: var(--bg);
       color: var(--text);
       -webkit-font-smoothing: antialiased;
+      background:
+        radial-gradient(rgba(0,0,0,0.025) 1px, transparent 1px),
+        radial-gradient(rgba(0,0,0,0.02) 1px, transparent 1px),
+        var(--bg);
+      background-size: 3px 3px, 6px 6px, auto;
     }
 
     .container {
-      max-width: 1100px;
+      max-width: 920px;
       margin: 0 auto;
-      padding: 100px 24px 80px;
+      padding: 130px 24px 110px;
+      text-align: center;
     }
 
     header {
-      text-align: center;
-      margin-bottom: 64px;
+      margin-bottom: 90px;
     }
 
     h1 {
       font-family: 'Playfair Display', serif;
-      font-size: clamp(2.5rem, 4vw, 3.2rem);
-      font-weight: 500;
-      letter-spacing: -0.02em;
-      margin-bottom: 12px;
+      font-size: clamp(2.6rem, 4vw, 3.2rem);
+      font-weight: 400;
+      letter-spacing: -0.01em;
+      margin-bottom: 16px;
+      color: #3a3a3a;
     }
 
     .tagline {
-      font-size: 0.95rem;
+      font-size: 1rem;
       color: var(--muted);
-      letter-spacing: 0.04em;
+      letter-spacing: 0.06em;
     }
 
     .grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 28px;
+      gap: 56px;
+      margin-bottom: 90px;
     }
 
     .card {
-      position: relative;
-      overflow: hidden;
-      border-radius: var(--card-radius);
-      box-shadow: var(--shadow);
-      transition: transform 0.35s ease, box-shadow 0.35s ease;
+      background: var(--paper);
+      box-shadow:
+        0 2px 4px rgba(0,0,0,0.04),
+        0 12px 30px rgba(0,0,0,0.08);
       text-decoration: none;
       color: inherit;
-      background: #000;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
     }
 
     .card:hover {
-      transform: translateY(-6px);
-      box-shadow: var(--shadow-hover);
+      transform: translateY(-4px);
+      box-shadow:
+        0 4px 8px rgba(0,0,0,0.06),
+        0 18px 40px rgba(0,0,0,0.10);
     }
 
-    .card img {
+    .image-wrap {
+      aspect-ratio: 4 / 5;
+      overflow: hidden;
+    }
+
+    .image-wrap img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       display: block;
-      filter: brightness(0.88) contrast(1.05);
-      transition: transform 0.6s ease, filter 0.4s ease;
     }
 
-    .card:hover img {
-      transform: scale(1.03);
-      filter: brightness(0.95) contrast(1.08);
-    }
-
-    .card::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(
-        to top,
-        rgba(0,0,0,0.45) 10%,
-        rgba(0,0,0,0.15) 50%,
-        rgba(0,0,0,0.05) 100%
-      );
-    }
-
-    .card-content {
-      position: absolute;
-      bottom: 20px;
-      left: 20px;
-      z-index: 2;
+    .card-body {
+      padding: 22px 20px 26px;
+      text-align: center;
+      border-top: 1px solid rgba(0,0,0,0.04);
     }
 
     .card-title {
       font-family: 'Playfair Display', serif;
-      font-size: 1.4rem;
-      font-weight: 500;
-      color: #fff;
-      letter-spacing: -0.01em;
+      font-size: 1.55rem;
+      font-weight: 400;
+      margin-bottom: 6px;
+      color: #3a3a3a;
+    }
+
+    .card-sub {
+      font-size: 0.9rem;
+      color: var(--muted);
+      font-style: italic;
+    }
+
+    .divider {
+      width: 38px;
+      height: 1px;
+      background: #bfbfbf;
+      margin: 10px auto 0;
+    }
+
+    .about {
+      font-size: 0.75rem;
+      letter-spacing: 0.25em;
+      color: var(--muted);
+      margin-bottom: 50px;
+    }
+
+    .footer {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      line-height: 1.9;
+      color: #3a3a3a;
+    }
+
+    .footer small {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.9rem;
+      color: var(--muted);
     }
 
     @media (max-width: 768px) {
-      .container {
-        padding: 80px 20px 60px;
-      }
-
       .grid {
         grid-template-columns: 1fr;
-        gap: 20px;
+        gap: 42px;
       }
 
-      .card {
-        height: 340px;
-      }
-    }
-
-    @media (min-width: 769px) {
-      .card {
-        height: 420px;
+      .container {
+        padding: 100px 20px 90px;
       }
     }
   </style>
@@ -151,18 +163,33 @@
 
     <div class="grid">
       <a href="#" class="card">
-        <img src="crow.jpg" alt="Photography">
-        <div class="card-content">
+        <div class="image-wrap">
+          <img src="crow.jpg" alt="Photography">
+        </div>
+        <div class="card-body">
           <div class="card-title">Photography</div>
+          <div class="card-sub">Soul & Horizon</div>
         </div>
       </a>
 
       <a href="#" class="card">
-        <img src="charcuterie.jpg" alt="Culinary">
-        <div class="card-content">
+        <div class="image-wrap">
+          <img src="charcuterie.jpg" alt="Culinary">
+        </div>
+        <div class="card-body">
           <div class="card-title">Culinary</div>
+          <div class="divider"></div>
         </div>
       </a>
+    </div>
+
+    <div class="about">ABOUT</div>
+
+    <div class="footer">
+      Samantha Piehoff<br>
+      <small>123-456-7890</small><br>
+      <small>samantha@email.com</small><br>
+      <small>www.saltandshadow.com</small>
     </div>
   </div>
 
