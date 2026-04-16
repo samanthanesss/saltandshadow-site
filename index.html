@@ -8,220 +8,133 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Inter:wght@300;400&display=swap" rel="stylesheet">
 
   <style>
-    :root {
-      --bg: #e7e3dc;
-      --paper: #f4f1ed;
-      --text: #2e2e2e;
-      --muted: #8a8a8a;
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
     body {
+      margin: 0;
       font-family: 'Inter', sans-serif;
-      color: var(--text);
-      -webkit-font-smoothing: antialiased;
-      background: var(--bg);
-      position: relative;
-    }
-
-    body::before {
-      content: "";
-      position: fixed;
-      inset: 0;
-      background: url('paper-texture.jpg');
-      opacity: 0.35;
-      pointer-events: none;
-      z-index: 0;
+      background: #f5f3f0;
+      color: #2f2f2f;
     }
 
     .container {
-      position: relative;
-      z-index: 1;
-      max-width: 900px;
+      max-width: 1100px;
       margin: 0 auto;
-      padding: 140px 24px 120px;
+      padding: 80px 20px;
       text-align: center;
-    }
-
-    header {
-      margin-bottom: 100px;
     }
 
     h1 {
       font-family: 'Playfair Display', serif;
-      font-size: clamp(2.5rem, 4vw, 3rem);
-      font-weight: 400;
-      letter-spacing: -0.01em;
-      margin-bottom: 18px;
-      color: #3b3b3b;
+      font-size: 48px;
+      margin-bottom: 10px;
     }
 
     .tagline {
-      font-size: 1rem;
-      color: var(--muted);
-      letter-spacing: 0.07em;
+      color: #777;
+      font-size: 16px;
+      margin-bottom: 30px;
+    }
+
+    .nav {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-bottom: 60px;
+      font-size: 14px;
+    }
+
+    .nav a {
+      text-decoration: none;
+      color: #555;
+      position: relative;
+    }
+
+    .nav a:hover {
+      opacity: 0.6;
     }
 
     .grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 60px;
-      margin-bottom: 100px;
+      gap: 40px;
     }
 
     .card {
-      background: var(--paper);
-      box-shadow:
-        0 1px 2px rgba(0,0,0,0.05),
-        0 14px 35px rgba(0,0,0,0.08);
       text-decoration: none;
       color: inherit;
-      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      background: white;
     }
 
-    .card:hover {
-      transform: translateY(-3px);
-      box-shadow:
-        0 4px 10px rgba(0,0,0,0.06),
-        0 20px 45px rgba(0,0,0,0.10);
-    }
-
-    .image-wrap {
-      aspect-ratio: 4 / 5;
-      overflow: hidden;
-    }
-
-    .image-wrap img {
+    .card img {
       width: 100%;
-      height: 100%;
+      height: 420px;
       object-fit: cover;
       display: block;
-      filter: brightness(0.94) contrast(0.98) saturate(0.95);
     }
 
-    .card-body {
-      padding: 20px 18px 24px;
-      border-top: 1px solid rgba(0,0,0,0.035);
+    .card-content {
+      padding: 24px;
     }
 
-    .card-title {
+    .card h2 {
       font-family: 'Playfair Display', serif;
-      font-size: 1.5rem;
-      font-weight: 400;
-      margin-bottom: 4px;
-      color: #3b3b3b;
+      margin: 0;
+      font-size: 26px;
     }
 
-    .card-sub {
-      font-size: 0.88rem;
-      color: var(--muted);
-      font-style: italic;
-    }
-
-    .divider {
-      width: 34px;
-      height: 1px;
-      background: #c4c4c4;
-      margin: 10px auto 0;
-    }
-
-    .about {
-      font-size: 0.72rem;
-      letter-spacing: 0.28em;
-      color: var(--muted);
-      margin-bottom: 60px;
-    }
-
-    .footer {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.05rem;
-      line-height: 2;
-      color: #3a3a3a;
-    }
-
-    .footer small {
-      font-family: 'Inter', sans-serif;
-      font-size: 0.88rem;
-      color: var(--muted);
-    }
-
-    .footer-divider {
-      width: 160px;
-      height: 1px;
-      background: #3a3a3a;
-      margin: 16px auto 20px;
-    }
-
-    .footer-bottom-divider {
-      width: 180px;
-      height: 1px;
-      background: #bdbdbd;
-      margin: 28px auto 16px;
+    .sub {
+      font-size: 14px;
+      color: #888;
+      margin-top: 6px;
     }
 
     @media (max-width: 768px) {
-      .grid {
-        grid-template-columns: 1fr;
-        gap: 44px;
+      h1 {
+        font-size: 36px;
       }
 
-      .container {
-        padding: 110px 20px 100px;
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .card img {
+        height: 320px;
       }
     }
   </style>
 </head>
-<body>
 
+<body>
   <div class="container">
-    <header>
-      <h1>Salt & Shadow</h1>
-      <div class="tagline">Food, image, and atmosphere.</div>
-    </header>
+
+    <h1>Salt & Shadow</h1>
+    <div class="tagline">Food, image, and atmosphere.</div>
+
+    <div class="nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="culinary.html">Culinary</a>
+      <a href="#">Photography</a>
+    </div>
 
     <div class="grid">
-      <a href="culinary.html" class="card">
-        <div class="image-wrap">
-          <img src="crow.jpg" alt="Photography">
+
+      <a href="#" class="card">
+        <img src="crow.jpg" alt="Photography" />
+        <div class="card-content">
+          <h2>Photography</h2>
+          <div class="sub">Soul & Horizon</div>
         </div>
-        <div class="card-body">
-          <div class="card-title">Photography</div>
-          <div class="card-sub">Soul & Horizon</div>
+      </a>
+
+      <a href="culinary.html" class="card">
+        <img src="charcuterie.jpg" alt="Culinary" />
+        <div class="card-content">
+          <h2>Culinary</h2>
         </div>
       </a>
 
-      <a href="culinary.html" class="card">
-        <div class="image-wrap">
-          <img src="charcuterie.jpg" alt="Culinary">
-        </div>
-        <div class="card-body">
-          <div class="card-title">Culinary</div>
-          <div class="divider"></div>
-        </div>
-      </a>
     </div>
 
-    <div class="about">ABOUT</div>
-
-    <div class="footer">
-      Samantha
-      <div class="footer-divider"></div>
-      <small>707-291-8066</small><br>
-      <small>hello@saltandshadowco.com</small><br>
-      <small>www.saltandshadowco.com</small>
-
-      <div class="footer-bottom-divider"></div>
-
-      <div style="font-style: italic; font-size: 0.95rem;">
-        Soul & Horizon – fine art photography
-      </div>
-    </div>
   </div>
-
 </body>
 </html>
