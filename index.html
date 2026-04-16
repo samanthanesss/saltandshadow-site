@@ -29,7 +29,6 @@
       position: relative;
     }
 
-    /* Real texture overlay */
     body::before {
       content: "";
       position: fixed;
@@ -151,6 +150,20 @@
       color: var(--muted);
     }
 
+    .footer-divider {
+      width: 160px;
+      height: 1px;
+      background: #3a3a3a;
+      margin: 16px auto 20px;
+    }
+
+    .footer-bottom-divider {
+      width: 180px;
+      height: 1px;
+      background: #bdbdbd;
+      margin: 28px auto 16px;
+    }
+
     @media (max-width: 768px) {
       .grid {
         grid-template-columns: 1fr;
@@ -196,10 +209,17 @@
     <div class="about">ABOUT</div>
 
     <div class="footer">
-      Samantha Piehoff<br>
-      <small>123-456-7890</small><br>
-      <small>samantha@email.com</small><br>
-      <small>www.saltandshadow.com</small>
+      Samantha
+      <div class="footer-divider"></div>
+      <small>707-291-8066</small><br>
+      <small>hello@saltandshadowco.com</small><br>
+      <small>www.saltandshadowco.com</small>
+
+      <div class="footer-bottom-divider"></div>
+
+      <div style="font-style: italic; font-size: 0.95rem;">
+        Soul & Horizon – fine art photography
+      </div>
     </div>
   </div>
 
