@@ -801,7 +801,6 @@ body.site-body {
 .blog-card {
   border-radius: 8px;
   overflow: hidden;
-  background: white;
   transition: var(--transition);
 }
 
@@ -828,7 +827,7 @@ body.site-body {
 }
 
 .blog-card__content {
-  padding: 20px;
+  display: none;
 }
 
 .blog-card__category {
