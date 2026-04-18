@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>[POST TITLE] — Salt & Shadow</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="site-body">
+  <div class="texture"></div>
+  <main class="page-shell page-shell--inner">
+    <nav class="page-top" aria-label="Primary">
+      <a class="back-link" href="blog-photography.html">Back</a>
+      <div class="site-nav site-nav--compact">
+        <a class="site-nav__link" href="index.html">Home</a>
+        <a class="site-nav__link" href="about.html">About</a>
+        <a class="site-nav__link" href="culinary.html">Culinary</a>
+        <a class="site-nav__link" href="photography.html">Photography</a>
+        <a class="site-nav__link" href="gallery.html">Gallery</a>
+        <a class="site-nav__link" href="blog-photography.html">Photography Blog</a>
+        <a class="site-nav__link" href="blog-culinary.html">Culinary Blog</a>
+        <a class="site-nav__link" href="contact.html">Contact</a>
+      </div>
+    </nav>
+
+    <article class="blog-post">
+      <header class="blog-post__header">
+        <h1 class="blog-post__title">[POST TITLE]</h1>
+        <p class="blog-post__meta">[TOPIC] • [CATEGORY]</p>
+      </header>
+
+      <div class="blog-post__content">
+        <!-- Opening paragraph(s) - context and hook -->
+        <p>Introduction to the concept or technique...</p>
+        <p>Why this matters or what inspired this post...</p>
+
+        <!-- Main sections with h2 headings -->
+        <h2>First Concept or Scenario</h2>
+        <p>Detailed explanation of the first point...</p>
+        <p>Examples and observations...</p>
+
+        <!-- Images are great for photography posts:
+        <img src="image-filename.jpg" alt="Description of what's in the image" />
+        -->
+
+        <h2>Second Concept or Scenario</h2>
+        <p>More detailed content here...</p>
+
+        <!-- Technical details can go in lists or paragraph form:
+        <h3>Technical Breakdown</h3>
+        <ul>
+          <li><strong>Setting one:</strong> Explanation</li>
+          <li><strong>Setting two:</strong> Explanation</li>
+          <li><strong>Setting three:</strong> Explanation</li>
+        </ul>
+        -->
+
+        <!-- A reflective closing section -->
+        <h2>What This Teaches</h2>
+        <p>Reflection on the broader lesson or takeaway...</p>
+        <p>How this principle applies beyond just this specific topic...</p>
+
+        <!-- You can use blockquotes for poignant statements:
+        <blockquote>Quote or key insight goes here.</blockquote>
+        -->
+      </div>
+
+      <footer class="blog-post__footer">
+        <a href="blog-photography.html" class="blog-post__back">← Back to Photography Blog</a>
+        <a href="blog-photography-post-[NEXT].html" class="blog-post__next">Next Post →</a>
+      </footer>
+    </article>
+  </main>
+
+  <script>
+    document.querySelectorAll('.site-nav__link').forEach(link => {
+      if (link.href === window.location.href) {
+        link.classList.add('site-nav__link--active');
+      }
+    });
+  </script>
+</body>
+</html>

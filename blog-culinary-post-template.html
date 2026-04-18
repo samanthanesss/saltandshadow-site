@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>[POST TITLE] — Salt & Shadow</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="site-body">
+  <div class="texture"></div>
+  <main class="page-shell page-shell--inner">
+    <nav class="page-top" aria-label="Primary">
+      <a class="back-link" href="blog-culinary.html">Back</a>
+      <div class="site-nav site-nav--compact">
+        <a class="site-nav__link" href="index.html">Home</a>
+        <a class="site-nav__link" href="about.html">About</a>
+        <a class="site-nav__link" href="culinary.html">Culinary</a>
+        <a class="site-nav__link" href="photography.html">Photography</a>
+        <a class="site-nav__link" href="gallery.html">Gallery</a>
+        <a class="site-nav__link" href="blog-photography.html">Photography Blog</a>
+        <a class="site-nav__link" href="blog-culinary.html">Culinary Blog</a>
+        <a class="site-nav__link" href="contact.html">Contact</a>
+      </div>
+    </nav>
+
+    <article class="blog-post">
+      <header class="blog-post__header">
+        <h1 class="blog-post__title">[POST TITLE]</h1>
+        <p class="blog-post__meta">[DATE] • [CATEGORY]</p>
+      </header>
+
+      <div class="blog-post__content">
+        <!-- Start with introductory paragraph(s) -->
+        <p>Opening paragraph that sets context and hooks the reader...</p>
+
+        <!-- Add sections with h2 headings -->
+        <h2>Section Title</h2>
+        <p>First paragraph of this section...</p>
+        <p>Additional paragraph with more detail or observation...</p>
+
+        <!-- You can include images inline like this:
+        <img src="image-filename.jpg" alt="Description of image" />
+        -->
+
+        <!-- Lists work great for recipes or techniques:
+        <ul>
+          <li>Item one with explanation</li>
+          <li>Item two with explanation</li>
+          <li>Item three with explanation</li>
+        </ul>
+        -->
+
+        <!-- Emphasis with <em> for terms, <strong> for important points -->
+        <p>Use <em>mise-en-place</em> for organization and <strong>cold water</strong> for stocks.</p>
+
+        <!-- Add a reflective closing section -->
+        <h2>What I'm Learning</h2>
+        <p>Closing thoughts about the experience or technique covered above...</p>
+      </div>
+
+      <footer class="blog-post__footer">
+        <a href="blog-culinary.html" class="blog-post__back">← Back to Culinary Journal</a>
+        <a href="blog-culinary-post-[NEXT].html" class="blog-post__next">Next Post →</a>
+      </footer>
+    </article>
+  </main>
+
+  <script>
+    document.querySelectorAll('.site-nav__link').forEach(link => {
+      if (link.href === window.location.href) {
+        link.classList.add('site-nav__link--active');
+      }
+    });
+  </script>
+</body>
+</html>
