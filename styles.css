@@ -783,8 +783,7 @@ body.site-body {
   text-align: center;
 }
 
-.gallery-item.hidden,
-.blog-card.hidden {
+.gallery-item.hidden {
   display: none;
 }
 
@@ -803,6 +802,10 @@ body.site-body {
   border-radius: 8px;
   overflow: hidden;
   transition: var(--transition);
+}
+
+.blog-card.hidden {
+  display: none;
 }
 
 .blog-card:hover {
