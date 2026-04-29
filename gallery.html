@@ -48,71 +48,56 @@
       <!-- Urban -->
       <article class="gallery-item" data-category="urban">
         <img src="gallery-urban-1.jpg" alt="Urban photography" />
-        <p class="gallery-item__caption">Urban</p>
       </article>
       <article class="gallery-item" data-category="urban">
         <img src="gallery-urban-2.jpg" alt="Urban photography" />
-        <p class="gallery-item__caption">Urban</p>
       </article>
       <article class="gallery-item" data-category="urban">
         <img src="gallery-urban-3.jpg" alt="Urban photography" />
-        <p class="gallery-item__caption">Urban</p>
       </article>
 
       <!-- Landscape -->
       <article class="gallery-item" data-category="landscape">
         <img src="gallery-landscape-1.jpg" alt="Landscape photography" />
-        <p class="gallery-item__caption">Landscape</p>
       </article>
       <article class="gallery-item" data-category="landscape">
         <img src="gallery-landscape-2.jpg" alt="Landscape photography" />
-        <p class="gallery-item__caption">Landscape</p>
       </article>
       <article class="gallery-item" data-category="landscape">
         <img src="gallery-landscape-3.jpg" alt="Landscape photography" />
-        <p class="gallery-item__caption">Landscape</p>
       </article>
 
       <!-- Wildlife -->
       <article class="gallery-item" data-category="wildlife">
         <img src="gallery-wildlife-1.jpg" alt="Wildlife photography" />
-        <p class="gallery-item__caption">Wildlife</p>
       </article>
       <article class="gallery-item" data-category="wildlife">
         <img src="gallery-wildlife-2.jpg" alt="Wildlife photography" />
-        <p class="gallery-item__caption">Wildlife</p>
       </article>
       <article class="gallery-item" data-category="wildlife">
         <img src="gallery-wildlife-3.jpg" alt="Wildlife photography" />
-        <p class="gallery-item__caption">Wildlife</p>
       </article>
 
       <!-- People -->
       <article class="gallery-item" data-category="people">
         <img src="gallery-people-1.jpg" alt="Portrait photography" />
-        <p class="gallery-item__caption">People</p>
       </article>
       <article class="gallery-item" data-category="people">
         <img src="gallery-people-2.jpg" alt="Portrait photography" />
-        <p class="gallery-item__caption">People</p>
       </article>
       <article class="gallery-item" data-category="people">
         <img src="gallery-people-3.jpg" alt="Portrait photography" />
-        <p class="gallery-item__caption">People</p>
       </article>
 
       <!-- Food -->
       <article class="gallery-item" data-category="food">
         <img src="gallery-food-1.jpg" alt="Food photography" />
-        <p class="gallery-item__caption">Food</p>
       </article>
       <article class="gallery-item" data-category="food">
         <img src="gallery-food-2.jpg" alt="Food photography" />
-        <p class="gallery-item__caption">Food</p>
       </article>
       <article class="gallery-item" data-category="food">
         <img src="gallery-food-3.jpg" alt="Food photography" />
-        <p class="gallery-item__caption">Food</p>
       </article>
     </section>
   </main>
@@ -120,11 +105,9 @@
   <script>
     document.querySelectorAll('.filter-button').forEach(button => {
       button.addEventListener('click', () => {
-        // Update active state
         document.querySelectorAll('.filter-button').forEach(b => b.classList.remove('filter-button--active'));
         button.classList.add('filter-button--active');
 
-        // Filter items
         const filter = button.dataset.filter;
         document.querySelectorAll('.gallery-item').forEach(item => {
           if (filter === 'all' || item.dataset.category === filter) {
