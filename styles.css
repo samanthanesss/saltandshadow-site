@@ -783,7 +783,8 @@ body.site-body {
   text-align: center;
 }
 
-.gallery-item.hidden {
+.gallery-item.hidden,
+.blog-card.hidden {
   display: none;
 }
 
