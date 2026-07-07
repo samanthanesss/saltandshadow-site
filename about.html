@@ -2,104 +2,248 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About — Salt & Shadow</title>
-
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+  <meta name="description" content="About Samantha — photographer and culinary artist based in Sonoma County, California." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:wght@300;400&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
 
   <style>
-    body {
-      margin: 0;
-      font-family: 'Inter', sans-serif;
-      background: #f5f3f0;
-      color: #2f2f2f;
-      line-height: 1.65;
-    }
-
-    .container {
-      max-width: 820px;
-      margin: 0 auto;
-      padding: 80px 20px;
-    }
-
-    .back {
-      font-size: 14px;
-      margin-bottom: 40px;
-      display: inline-block;
-      text-decoration: none;
-      color: #7a7a7a;
-    }
-
-    .back:hover {
-      opacity: 0.6;
-    }
-
-    h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 40px;
-      margin-bottom: 40px;
-    }
-
-    .layout {
+    .about-section {
+      padding: 10rem 3rem 7rem;
       display: grid;
-      grid-template-columns: 260px 1fr;
-      gap: 60px;
+      grid-template-columns: 1fr 2fr;
+      gap: 6rem;
       align-items: start;
+      max-width: 1200px;
+      margin: 0 auto;
     }
 
-    .headshot img {
+    /* Left: sticky headshot column */
+    .about-image-wrap {
+      position: sticky;
+      top: 7rem;
+    }
+
+    .about-image-wrap img {
       width: 100%;
-      height: auto;
+      aspect-ratio: 3 / 4;
+      object-fit: cover;
+      object-position: top center;
       display: block;
+      filter: brightness(0.88) saturate(0.72);
+      border: 1px solid var(--border);
     }
 
-    p {
-      margin: 0 0 18px 0;
-      font-size: 16px;
-      color: #3a3a3a;
+    .about-image-caption {
+      margin-top: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+    }
+
+    .about-name {
+      font-family: 'Cormorant', serif;
+      font-weight: 300;
+      font-size: 1.4rem;
+      color: var(--text-primary);
+      line-height: 1.2;
+    }
+
+    .about-name em {
+      font-style: italic;
+      color: var(--stone);
+    }
+
+    .about-titles {
+      font-size: 0.62rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      line-height: 2.4;
+      margin-top: 0.5rem;
+    }
+
+    /* Right: bio content */
+    .about-body {
+      font-family: 'Cormorant', serif;
+      font-weight: 300;
+      font-size: clamp(1.05rem, 1.75vw, 1.3rem);
+      color: var(--text-secondary);
+      line-height: 1.85;
+      margin-bottom: 2rem;
+    }
+
+    .about-quote {
+      font-family: 'Cormorant', serif;
+      font-style: italic;
+      font-weight: 300;
+      font-size: clamp(1.1rem, 1.8vw, 1.4rem);
+      color: var(--stone);
+      line-height: 1.7;
+      padding: 2.5rem;
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--accent);
+      background: var(--bg-surface);
+      margin: 3rem 0;
+    }
+
+    .about-meta {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      padding-top: 2.5rem;
+      border-top: 1px solid var(--border);
+      margin-top: 2.5rem;
+    }
+
+    .meta-label {
+      font-size: 0.58rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.4rem;
+    }
+
+    .meta-value {
+      font-size: 0.78rem;
+      color: var(--text-secondary);
+      line-height: 1.8;
     }
 
     @media (max-width: 768px) {
-      .layout {
+      .about-section {
         grid-template-columns: 1fr;
-        gap: 30px;
+        gap: 3rem;
+        padding: 8rem 1.5rem 5rem;
       }
-
-      h1 {
-        font-size: 32px;
+      .about-image-wrap { position: static; }
+      .about-image-wrap img {
+        aspect-ratio: 1 / 1;
+        max-width: 240px;
       }
-
-      .headshot {
-        max-width: 280px;
-      }
+      .about-meta { grid-template-columns: 1fr; }
     }
   </style>
 </head>
 
 <body>
-  <div class="container">
+  <nav>
+    <a href="index.html" class="nav-logo">Salt &amp; Shadow</a>
+    <ul class="nav-links">
+      <li><a href="photography.html">Photography</a></li>
+      <li><a href="culinary.html">Culinary</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+  </nav>
 
-    <a href="index.html" class="back">← Back</a>
+  <section class="about-section">
 
-    <h1>About</h1>
-
-    <div class="layout">
-
-      <div class="headshot">
-        <img src="headshot.jpg" alt="Portrait of Samantha Piehoff" />
+    <!-- Left: image + name -->
+    <div class="about-image-wrap reveal">
+      <img src="headshot.jpg" alt="Portrait of Samantha" />
+      <div class="about-image-caption">
+        <p class="about-name">Samantha</p>
+        <p class="about-titles">
+          Photographer<br />
+          Culinary Artist<br />
+          Sonoma County, CA
+        </p>
       </div>
-
-      <div class="text">
-        
-        <p>Cooking came to me through self-teaching, and photography through a long practice of learning to really see the world around me. Over time, the two stopped feeling separate. Both come down to the same things: patience, passion, and a creative eye for detail.</p>
-
-<p>Right now I'm in culinary school, working toward a professional skillset while continuing to build my photography under Soul &amp; Horizon. Alongside that, I bring a background in administrative and operational work, the kind of behind-the-scenes support that keeps creative projects moving.</p>
-
-<p>I'm based in Sonoma County and the greater Bay Area, and the place shapes everything I make. Seasonal food, local sourcing, the landscapes and wildlife I live among. What draws me most is where cooking and image meet, and how food photography and styling can bring those two practices into the same frame.</p>
-      </div>
-
     </div>
 
-  </div>
+    <!-- Right: bio -->
+    <div class="about-content">
+      <p class="label">03 &mdash; About</p>
+
+      <p class="about-body reveal">
+        Cooking came to me through self-teaching, and photography through a long practice of learning to really see the world around me. Over time, the two stopped feeling separate. Both come down to the same things: patience, passion, and a creative eye for detail.
+      </p>
+
+      <p class="about-body reveal reveal-delay-1">
+        Right now I'm in culinary school, working toward a professional skillset while continuing to build my photography under Soul &amp; Horizon. Alongside that, I bring a background in administrative and operational work, the kind of behind-the-scenes support that keeps creative projects moving.
+      </p>
+
+      <p class="about-body reveal reveal-delay-2">
+        I'm based in Sonoma County and the greater Bay Area, and the place shapes everything I make. Seasonal food, local sourcing, the landscapes and wildlife I live among. What draws me most is where cooking and image meet, and how food photography and styling can bring those two practices into the same frame.
+      </p>
+
+      <blockquote class="about-quote reveal">
+        "Both disciplines ask for the same thing: presence. You can't rush a reduction any more than you can rush the light."
+      </blockquote>
+
+      <div class="about-meta reveal">
+        <div>
+          <p class="meta-label">Based in</p>
+          <p class="meta-value">Sonoma County<br />California</p>
+        </div>
+        <div>
+          <p class="meta-label">Photography</p>
+          <p class="meta-value">Soul &amp; Horizon<br />Fine Art</p>
+        </div>
+        <div>
+          <p class="meta-label">Training</p>
+          <p class="meta-value">Culinary Arts<br />Santa Rosa Junior College</p>
+        </div>
+        <div>
+          <p class="meta-label">Available for</p>
+          <p class="meta-value">Collaboration<br />Commission</p>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <p class="footer-brand">Salt<br /><em>&amp;</em><br />Shadow</p>
+        <p class="footer-tagline">Food, image, and atmosphere.</p>
+      </div>
+      <div>
+        <p class="footer-contact-label">Get in touch</p>
+        <div class="contact-item">
+          <span class="contact-type">Email</span>
+          <a href="mailto:hello@saltandshadowco.com" class="contact-value">hello@saltandshadowco.com</a>
+        </div>
+        <div class="contact-item">
+          <span class="contact-type">Photography</span>
+          <a href="https://soulandhorizon.myportfolio.com" target="_blank" class="contact-value">soulandhorizon.myportfolio.com</a>
+        </div>
+      </div>
+      <div>
+        <p class="footer-contact-label">Freelance Work</p>
+        <div class="contact-item">
+          <span class="contact-type">Operations &amp; Admin</span>
+          <a href="https://www.upwork.com/freelancers/~0102b11fca57aaee84?mp_source=share" target="_blank" class="contact-value">Available on Upwork ↗</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">&copy; 2026 Salt &amp; Shadow &mdash; Samantha</p>
+    </div>
+  </footer>
+
+  <script>
+    const nav = document.querySelector('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 40);
+    });
+
+    const page = window.location.pathname.split('/').pop() || 'index.html';
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      if (link.getAttribute('href') === page) link.classList.add('active');
+    });
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.08 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
 </body>
 </html>

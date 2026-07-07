@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Photography — Salt & Shadow</title>
+  <meta name="description" content="Fine art photography by Samantha — Soul & Horizon. Nature, light, and stillness." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:wght@300;400&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    /* Portfolio section */
+    .portfolio-section {
+      padding: 7rem 3rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .portfolio-intro {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      margin-bottom: 5rem;
+      align-items: start;
+    }
+
+    .portfolio-body {
+      font-size: 0.82rem;
+      color: var(--text-secondary);
+      line-height: 1.95;
+      margin-bottom: 1.25rem;
+    }
+
+    /* Photo grid */
+    .photo-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 2px;
+      background: var(--border);
+      margin-bottom: 2px;
+    }
+
+    .photo-grid-col {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .photo-cell {
+      overflow: hidden;
+      position: relative;
+      background: var(--bg-surface);
+    }
+
+    .photo-cell img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      filter: brightness(0.85) saturate(0.8);
+      transition: filter 0.45s ease, transform 0.45s ease;
+    }
+
+    .photo-cell:hover img {
+      filter: brightness(0.96) saturate(1.0);
+      transform: scale(1.02);
+    }
+
+    .photo-cell-caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 1.5rem;
+      background: linear-gradient(to top, rgba(10,10,12,0.75) 0%, transparent 100%);
+      font-family: 'DM Mono', monospace;
+      font-size: 0.58rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--stone);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .photo-cell:hover .photo-cell-caption { opacity: 1; }
+
+    .photo-placeholder {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--bg-raised);
+      border: 1px dashed var(--border-light);
+    }
+
+    /* CTA block */
+    .portfolio-link-block {
+      margin-top: 5rem;
+      padding: 3rem;
+      border: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: var(--bg-surface);
+    }
+
+    .portfolio-link-label {
+      font-size: 0.62rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.5rem;
+    }
+
+    .portfolio-link-title {
+      font-family: 'Cormorant', serif;
+      font-weight: 300;
+      font-size: 1.5rem;
+      color: var(--text-primary);
+    }
+
+    @media (max-width: 768px) {
+      .portfolio-section { padding: 5rem 1.5rem; }
+      .portfolio-intro { grid-template-columns: 1fr; gap: 2.5rem; }
+      .photo-grid { grid-template-columns: 1fr; }
+      .portfolio-link-block { flex-direction: column; gap: 2rem; align-items: flex-start; }
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <a href="index.html" class="nav-logo">Salt &amp; Shadow</a>
+    <ul class="nav-links">
+      <li><a href="photography.html">Photography</a></li>
+      <li><a href="culinary.html">Culinary</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+  </nav>
+
+  <!-- Page Hero -->
+  <header class="page-hero">
+    <img src="crow.jpg" alt="" class="page-hero-bg" aria-hidden="true" />
+    <div class="page-hero-content">
+      <p class="label" style="margin-bottom:2rem;">01 &mdash; Photography</p>
+      <h1 class="page-title">Fine Art<br /><em>Photography</em></h1>
+      <p class="page-subtitle">
+        Nature, stillness, and the quiet between moments. Work rooted in patient observation &mdash; shadows, negative space, and light that doesn't announce itself.
+      </p>
+    </div>
+  </header>
+
+  <!-- Portfolio Content -->
+  <section class="portfolio-section">
+
+    <div class="portfolio-intro reveal">
+      <div>
+        <p class="portfolio-body">
+          Fine art photography under the name <em>Soul &amp; Horizon</em>. Focused on natural subjects, natural light, and the discipline of waiting for a moment to reveal itself rather than constructing it.
+        </p>
+        <p class="portfolio-body">
+          Currently developing the portfolio with a focus on wildlife, landscape, and the atmospheric quality of Northern California light. Available for commission, collaboration, and editorial food photography work.
+        </p>
+        <a href="https://soulandhorizon.myportfolio.com" target="_blank" class="btn" style="margin-top:2rem;">
+          Visit Soul &amp; Horizon ↗
+        </a>
+      </div>
+      <blockquote class="pull-quote reveal reveal-delay-1">
+        "Watched this heron stand perfectly still for close to ten minutes before it moved. There's something honest about an animal that doesn't perform for anyone."
+      </blockquote>
+    </div>
+
+    <hr class="rule" />
+
+    <!-- Image grid -->
+    <div class="photo-grid reveal">
+      <!-- Main feature image -->
+      <div class="photo-cell" style="aspect-ratio: 4/3;">
+        <img src="crow.jpg" alt="Crow — natural light study" />
+        <p class="photo-cell-caption">Crow &mdash; natural light study</p>
+      </div>
+      <!-- Side column: placeholders for future images -->
+      <div class="photo-grid-col">
+        <div class="photo-cell photo-placeholder" style="aspect-ratio: 1; min-height: 200px;">
+          <span class="meta">Coming soon</span>
+        </div>
+        <div class="photo-cell photo-placeholder" style="aspect-ratio: 1; min-height: 200px;">
+          <span class="meta">Coming soon</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Link to full portfolio -->
+    <div class="portfolio-link-block reveal">
+      <div>
+        <p class="portfolio-link-label">Full Portfolio</p>
+        <p class="portfolio-link-title">Soul &amp; Horizon</p>
+      </div>
+      <a href="https://soulandhorizon.myportfolio.com" target="_blank" class="btn btn-primary">
+        View All Work →
+      </a>
+    </div>
+
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <p class="footer-brand">Salt<br /><em>&amp;</em><br />Shadow</p>
+        <p class="footer-tagline">Food, image, and atmosphere.</p>
+      </div>
+      <div>
+        <p class="footer-contact-label">Get in touch</p>
+        <div class="contact-item">
+          <span class="contact-type">Email</span>
+          <a href="mailto:hello@saltandshadowco.com" class="contact-value">hello@saltandshadowco.com</a>
+        </div>
+        <div class="contact-item">
+          <span class="contact-type">Photography</span>
+          <a href="https://soulandhorizon.myportfolio.com" target="_blank" class="contact-value">soulandhorizon.myportfolio.com</a>
+        </div>
+      </div>
+      <div>
+        <p class="footer-contact-label">Freelance Work</p>
+        <div class="contact-item">
+          <span class="contact-type">Operations &amp; Admin</span>
+          <a href="https://www.upwork.com/freelancers/~0102b11fca57aaee84?mp_source=share" target="_blank" class="contact-value">Available on Upwork ↗</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">&copy; 2026 Salt &amp; Shadow &mdash; Samantha</p>
+    </div>
+  </footer>
+
+  <script>
+    const nav = document.querySelector('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 40);
+    });
+
+    const page = window.location.pathname.split('/').pop() || 'index.html';
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      if (link.getAttribute('href') === page) link.classList.add('active');
+    });
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.08 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>

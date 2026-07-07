@@ -2,109 +2,254 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Culinary — Salt & Shadow</title>
-
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+  <meta name="description" content="Culinary arts work by Samantha — technique, composition, and the visual language of food." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:wght@300;400&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
 
   <style>
-    body {
-      margin: 0;
-      font-family: 'Inter', sans-serif;
-      background: #f5f3f0;
-      color: #2f2f2f;
-    }
-
-    .container {
-      max-width: 700px;
+    .culinary-section {
+      padding: 7rem 3rem;
+      max-width: 1200px;
       margin: 0 auto;
-      padding: 80px 20px;
     }
 
-    .back {
-      font-size: 14px;
-      color: #777;
-      text-decoration: none;
-      display: inline-block;
-      margin-bottom: 60px;
+    .culinary-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.3fr;
+      gap: 6rem;
+      align-items: start;
     }
 
-    .back:hover {
-      opacity: 0.6;
+    .culinary-body {
+      font-size: 0.82rem;
+      color: var(--text-secondary);
+      line-height: 1.95;
+      margin-bottom: 1.25rem;
     }
 
-    h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 44px;
-      margin-bottom: 30px;
+    /* Focus / skills list */
+    .focus-list {
+      list-style: none;
+      margin-top: 2.5rem;
+      border-top: 1px solid var(--border);
+      padding-top: 2rem;
     }
 
-    p {
-      font-size: 16px;
-      line-height: 1.7;
-      color: #444;
-      margin-bottom: 24px;
+    .focus-list li {
+      display: flex;
+      align-items: baseline;
+      gap: 1.25rem;
+      padding: 0.8rem 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-secondary);
+      transition: color 0.2s ease, padding-left 0.2s ease;
     }
 
-    .section {
-      margin-top: 50px;
-      padding-top: 30px;
-      border-top: 1px solid #ddd;
+    .focus-list li:hover {
+      color: var(--text-primary);
+      padding-left: 0.4rem;
     }
 
-    .list-item {
-      margin-bottom: 12px;
-      font-size: 15px;
-      color: #444;
+    .focus-list li::before {
+      content: '—';
+      color: var(--accent);
+      font-size: 0.6rem;
+      flex-shrink: 0;
     }
 
-    .label {
-      font-weight: 500;
+    .focus-label {
+      color: var(--text-primary);
+      font-weight: 400;
     }
 
-    .resume {
-      margin-top: 30px;
+    /* Image mosaic */
+    .culinary-images {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2px;
+      background: var(--border);
     }
 
-    .resume a {
-      text-decoration: none;
-      color: #444;
-      border-bottom: 1px solid #aaa;
+    .culinary-cell {
+      overflow: hidden;
+      aspect-ratio: 1;
+      background: var(--bg-surface);
+      position: relative;
     }
 
-    .resume a:hover {
-      opacity: 0.6;
+    .culinary-cell img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      filter: brightness(0.82) saturate(0.8);
+      transition: filter 0.4s ease, transform 0.4s ease;
+    }
+
+    .culinary-cell:hover img {
+      filter: brightness(0.94) saturate(0.95);
+      transform: scale(1.03);
+    }
+
+    .culinary-cell-placeholder {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--bg-raised);
+      border: 1px dashed var(--border-light);
+    }
+
+    /* Resume link section */
+    .resume-block {
+      margin-top: 2.5rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .resume-label {
+      font-size: 0.58rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.75rem;
+    }
+
+    @media (max-width: 768px) {
+      .culinary-section { padding: 5rem 1.5rem; }
+      .culinary-grid { grid-template-columns: 1fr; gap: 3.5rem; }
+      .culinary-images { grid-template-columns: 1fr 1fr; }
     }
   </style>
 </head>
 
 <body>
-  <div class="container">
+  <nav>
+    <a href="index.html" class="nav-logo">Salt &amp; Shadow</a>
+    <ul class="nav-links">
+      <li><a href="photography.html">Photography</a></li>
+      <li><a href="culinary.html">Culinary</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+  </nav>
 
-    <a href="index.html" class="back">← Back</a>
+  <!-- Page Hero -->
+  <header class="page-hero">
+    <img src="charcuterie.jpg" alt="" class="page-hero-bg" aria-hidden="true" />
+    <div class="page-hero-content">
+      <p class="label" style="margin-bottom:2rem;">02 &mdash; Culinary</p>
+      <h1 class="page-title">Kitchen<br /><em>Craft</em></h1>
+      <p class="page-subtitle">
+        Building real skills in a real kitchen — learning to work clean, think fast, and make food that tastes as good as it looks.
+      </p>
+    </div>
+  </header>
 
-    <h1>Culinary</h1>
+  <!-- Content -->
+  <section class="culinary-section">
+    <div class="culinary-grid">
 
-    <p>
-      I'm currently in formal culinary training, building on a lifelong love of cooking. My focus is on developing technique, building strong fundamentals, and refining presentation through a mix of structured coursework and independent practice.
-    </p>
+      <!-- Left: text + focus list -->
+      <div class="reveal">
+        <h2 style="font-family:'Cormorant',serif; font-weight:300; font-size:clamp(2rem,3.5vw,2.75rem); color:var(--text-primary); margin-bottom:1.5rem; line-height:1.1;">
+          Where food meets<br /><em style="color:var(--stone);">composition</em>
+        </h2>
 
-    <p>
-      I'm looking for real-world kitchen experience where I can contribute at an entry level and keep growing through hands-on work.
-    </p>
+        <p class="culinary-body">
+          I'm currently in formal culinary training, building on a lifelong love of cooking. My focus is on developing technique, building strong fundamentals, and refining presentation through a mix of structured coursework and independent practice.
+        </p>
 
-    <div class="section">
-      <div class="list-item"><span class="label">Training:</span> Santa Rosa Junior College Culinary Arts Program (in progress)</div>
-      <div class="list-item"><span class="label">Focus:</span> knife work, mise en place, pantry, foundational cooking methods</div>
-      <div class="list-item"><span class="label">Approach:</span> clean, organized workflow with attention to detail and consistency</div>
-      <div class="list-item"><span class="label">Experience:</span> independent cooking, group meal prep, strong timing and organization</div>
-      <div class="list-item"><span class="label">Background:</span> 10+ years in operations and structured business environments across other sectors</div>
+        <p class="culinary-body">
+          I'm looking for real-world kitchen experience where I can contribute at an entry level and keep growing through hands-on work.
+        </p>
 
-      <div class="resume">
-        <a href="resume.pdf" target="_blank">Download full resume</a>
+        <ul class="focus-list">
+          <li><span class="focus-label">Training:</span> Santa Rosa Junior College Culinary Arts Program (in progress)</li>
+          <li><span class="focus-label">Focus:</span> knife work, mise en place, pantry, foundational cooking methods</li>
+          <li><span class="focus-label">Approach:</span> clean, organized workflow with attention to detail and consistency</li>
+          <li><span class="focus-label">Experience:</span> independent cooking, group meal prep, strong timing and organization</li>
+          <li><span class="focus-label">Background:</span> 10+ years in operations and structured business environments across other sectors</li>
+        </ul>
+
+        <div class="resume-block">
+          <p class="resume-label">Resume</p>
+          <a href="resume.pdf" target="_blank" class="btn">Download full resume →</a>
+        </div>
+      </div>
+
+      <!-- Right: image mosaic -->
+      <div class="culinary-images reveal reveal-delay-1">
+        <div class="culinary-cell">
+          <img src="charcuterie.jpg" alt="Charcuterie board" />
+        </div>
+        <div class="culinary-cell culinary-cell-placeholder">
+          <span class="meta">Coming soon</span>
+        </div>
+        <div class="culinary-cell culinary-cell-placeholder">
+          <span class="meta">Coming soon</span>
+        </div>
+        <div class="culinary-cell culinary-cell-placeholder">
+          <span class="meta">Coming soon</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <p class="footer-brand">Salt<br /><em>&amp;</em><br />Shadow</p>
+        <p class="footer-tagline">Food, image, and atmosphere.</p>
+      </div>
+      <div>
+        <p class="footer-contact-label">Get in touch</p>
+        <div class="contact-item">
+          <span class="contact-type">Email</span>
+          <a href="mailto:hello@saltandshadowco.com" class="contact-value">hello@saltandshadowco.com</a>
+        </div>
+        <div class="contact-item">
+          <span class="contact-type">Photography</span>
+          <a href="https://soulandhorizon.myportfolio.com" target="_blank" class="contact-value">soulandhorizon.myportfolio.com</a>
+        </div>
+      </div>
+      <div>
+        <p class="footer-contact-label">Freelance Work</p>
+        <div class="contact-item">
+          <span class="contact-type">Operations &amp; Admin</span>
+          <a href="https://www.upwork.com/freelancers/~0102b11fca57aaee84?mp_source=share" target="_blank" class="contact-value">Available on Upwork ↗</a>
+        </div>
       </div>
     </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">&copy; 2026 Salt &amp; Shadow &mdash; Samantha</p>
+    </div>
+  </footer>
 
-  </div>
+  <script>
+    const nav = document.querySelector('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 40);
+    });
+
+    const page = window.location.pathname.split('/').pop() || 'index.html';
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      if (link.getAttribute('href') === page) link.classList.add('active');
+    });
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.08 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
 </body>
 </html>
