@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /blog-culinary-post-template.html
+Disallow: /blog-photography-post-template.html
+Disallow: /BRANDING_GUIDE.html
+
+Sitemap: https://saltandshadowco.com/sitemap.xml
