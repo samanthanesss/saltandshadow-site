@@ -1447,3 +1447,71 @@ body.site-body {
     aspect-ratio: 4 / 3;
   }
 }
+
+/* ========================================
+   POEMS: photo beside its poem
+   ======================================== */
+
+.poem-list {
+  display: grid;
+  gap: 72px;
+  margin-top: 36px;
+}
+
+.poem {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  gap: 48px;
+  align-items: center;
+}
+
+.poem:nth-child(even) .poem__photo {
+  order: 2;
+}
+
+.poem__photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  cursor: pointer;
+  -webkit-user-drag: none;
+  user-select: none;
+}
+
+.poem__title {
+  font-family: "Playfair Display", serif;
+  font-size: 1.7rem;
+  font-weight: 500;
+  font-style: italic;
+  margin: 0 0 22px;
+}
+
+.poem__text p {
+  font-size: 1.02rem;
+  line-height: 1.7;
+  margin: 0 0 1.3em;
+  white-space: pre-line;
+}
+
+.poem__meta {
+  margin-top: 18px;
+  font-size: 0.82rem;
+  color: #6b6b6b;
+}
+
+@media (max-width: 900px) {
+  .poem {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .poem:nth-child(even) .poem__photo {
+    order: 0;
+  }
+}
+
+.intro-note a {
+  color: var(--navy);
+  text-underline-offset: 3px;
+}

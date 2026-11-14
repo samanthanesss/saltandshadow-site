@@ -4,7 +4,7 @@
   if (!box) return;
   const img = box.querySelector('.lightbox__image');
   const cap = box.querySelector('.lightbox__caption');
-  const photos = document.querySelectorAll('.gallery-item img, .post-photos img');
+  const photos = document.querySelectorAll('.gallery-item img, .post-photos img, .poem__photo img');
 
   function open(el) {
     img.src = el.src;
