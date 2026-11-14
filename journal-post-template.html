@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>POST TITLE — Salt & Shadow</title>
+  <meta name="description" content="ONE-LINE SUMMARY" />
+  <link rel="canonical" href="https://saltandshadowco.com/journal-SLUG.html" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <meta property="og:site_name" content="Salt &amp; Shadow" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="POST TITLE — Salt & Shadow" />
+  <meta property="og:description" content="ONE-LINE SUMMARY" />
+  <meta property="og:url" content="https://saltandshadowco.com/journal-SLUG.html" />
+  <meta property="og:image" content="https://saltandshadowco.com/img/journal-SLUG-1.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="site-body">
+  <div class="texture"></div>
+  <main class="page-shell page-shell--inner">
+    <nav class="page-top" aria-label="Primary">
+      <a class="back-link" href="index.html">Back</a>
+      <div class="site-nav site-nav--compact">
+        <a class="site-nav__link" href="index.html">Home</a>
+        <a class="site-nav__link" href="gallery.html">Photography</a>
+        <a class="site-nav__link site-nav__link--active" href="journal.html">Journal</a>
+        <a class="site-nav__link" href="about.html">About</a>
+        <a class="site-nav__link" href="contact.html">Contact</a>
+      </div>
+    </nav>
+
+    <article class="blog-post">
+      <header class="blog-post__header">
+        <h1 class="blog-post__title">POST TITLE</h1>
+        <p class="blog-post__meta">MONTH DAY, YEAR · PLACE</p>
+      </header>
+
+      <div class="blog-post__content">
+        <p>BLURB — a few sentences in her words.</p>
+      </div>
+
+      <!-- Photos: add class="wide" to a figure to run it full width. Captions optional. -->
+      <section class="post-photos" aria-label="Photos">
+        <figure class="wide"><img src="img/journal-SLUG-1.jpg" alt="ALT TEXT" draggable="false" /><figcaption>CAPTION</figcaption></figure>
+        <figure><img loading="lazy" decoding="async" src="img/journal-SLUG-2.jpg" alt="ALT TEXT" draggable="false" /></figure>
+        <figure><img loading="lazy" decoding="async" src="img/journal-SLUG-3.jpg" alt="ALT TEXT" draggable="false" /></figure>
+      </section>
+
+      <footer class="blog-post__footer">
+        <a class="blog-post__back" href="journal.html">&larr; Back to the Journal</a>
+      </footer>
+    </article>
+  </main>
+
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox__close" aria-label="Close">&times;</button>
+    <figure class="lightbox__figure"><img class="lightbox__image" src="" alt="" /><figcaption class="lightbox__caption"></figcaption></figure>
+  </div>
+  <script src="lightbox.js"></script>
+</body>
+</html>

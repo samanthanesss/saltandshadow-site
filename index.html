@@ -4,13 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Salt & Shadow</title>
-  <meta name="description" content="Salt & Shadow — food, image, and atmosphere. Photography and culinary work by Samantha, based in Sonoma County, California." />
+  <meta name="description" content="Salt & Shadow — food, image, and atmosphere. Photography, outings, and food by Samantha in Sonoma County, California." />
   <link rel="canonical" href="https://saltandshadowco.com/" />
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
   <meta property="og:site_name" content="Salt &amp; Shadow" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Salt & Shadow" />
-  <meta property="og:description" content="Salt & Shadow — food, image, and atmosphere. Photography and culinary work by Samantha, based in Sonoma County, California." />
+  <meta property="og:description" content="Salt & Shadow — food, image, and atmosphere. Photography, outings, and food by Samantha in Sonoma County, California." />
   <meta property="og:url" content="https://saltandshadowco.com/" />
   <meta property="og:image" content="https://saltandshadowco.com/img/home-photography.jpeg" />
   <meta name="twitter:card" content="summary_large_image" />
@@ -27,41 +27,44 @@
       <p class="tagline">Food, image, and atmosphere.</p>
       <nav class="site-nav" aria-label="Primary">
         <a class="site-nav__link site-nav__link--active" href="index.html">Home</a>
-        <a class="site-nav__link" href="about.html">About</a>
-        <a class="site-nav__link" href="culinary.html">Culinary</a>
         <a class="site-nav__link" href="gallery.html">Photography</a>
-        <a class="site-nav__link" href="blog-culinary.html">Culinary Blog</a>
+        <a class="site-nav__link" href="journal.html">Journal</a>
+        <a class="site-nav__link" href="about.html">About</a>
         <a class="site-nav__link" href="contact.html">Contact</a>
       </nav>
     </section>
 
-    <section class="feature-grid" aria-label="Creative avenues">
+    <!-- Lead photo: swap freely; keep it a strong landscape-oriented image -->
+    <a href="gallery.html" class="home-lead">
+      <img src="img/gallery-nature-8.jpg" alt="Afterglow over Bodega Bay, the water still and reflecting a band of red light." />
+      <div class="home-lead__caption">Afterglow over Bodega Bay</div>
+    </a>
+
+    <section class="feature-grid" aria-label="Sections">
       <a href="gallery.html" class="feature-card feature-card--compact">
         <div class="feature-card__image">
-          <img src="img/home-photography.jpeg" alt="Photography" />
+          <img loading="lazy" decoding="async" src="img/home-photography.jpeg" alt="Photography" style="object-position: center 15%" />
         </div>
         <div class="feature-card__body">
           <h2>Photography</h2>
         </div>
       </a>
 
-      <a href="culinary.html" class="feature-card feature-card--compact">
+      <a href="journal.html" class="feature-card feature-card--compact">
         <div class="feature-card__image">
-          <img src="img/home-culinary.jpeg" alt="Culinary" />
+          <img loading="lazy" decoding="async" src="img/home-culinary.jpeg" alt="Journal" />
         </div>
         <div class="feature-card__body">
-          <h2>Culinary</h2>
+          <h2>Journal</h2>
         </div>
       </a>
     </section>
 
+    <!-- LATEST POSTS: when the Journal has posts, add a "From the Journal" section here with the newest 3 cards -->
+
     <footer class="signature-block">
       <div class="signature-block__line signature-block__line--name">Samantha</div>
-      <div class="signature-block__line">hello@saltandshadowco.com</div>
-      <div class="signature-block__line">www.saltandshadowco.com</div>
-      <div class="signature-block__cta">
-        <a href="https://www.upwork.com/freelancers/~0102b11fca57aaee84?mp_source=share" target="_blank" rel="noreferrer">Operations & Other Freelance Work</a>
-      </div>
+      <div class="signature-block__line"><a href="mailto:hello@saltandshadowco.com" style="color:inherit">hello@saltandshadowco.com</a></div>
     </footer>
   </main>
 </body>

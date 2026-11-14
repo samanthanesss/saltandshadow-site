@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Journal — Salt & Shadow</title>
+  <meta name="description" content="Photo outings and food from Sonoma County — a simple journal by Salt & Shadow." />
+  <link rel="canonical" href="https://saltandshadowco.com/journal.html" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <meta property="og:site_name" content="Salt &amp; Shadow" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Journal — Salt & Shadow" />
+  <meta property="og:description" content="Photo outings and food from Sonoma County — a simple journal by Salt & Shadow." />
+  <meta property="og:url" content="https://saltandshadowco.com/journal.html" />
+  <meta property="og:image" content="https://saltandshadowco.com/img/home-photography.jpeg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="site-body">
+  <div class="texture"></div>
+  <main class="page-shell page-shell--inner">
+    <nav class="page-top" aria-label="Primary">
+      <a class="back-link" href="index.html">Back</a>
+      <div class="site-nav site-nav--compact">
+        <a class="site-nav__link" href="index.html">Home</a>
+        <a class="site-nav__link" href="gallery.html">Photography</a>
+        <a class="site-nav__link site-nav__link--active" href="journal.html">Journal</a>
+        <a class="site-nav__link" href="about.html">About</a>
+        <a class="site-nav__link" href="contact.html">Contact</a>
+      </div>
+    </nav>
+
+    <section class="inner-hero inner-hero--left">
+      <h1 class="page-title">Journal</h1>
+      <p class="intro-note">Photo outings, food, and whatever caught my eye along the way.</p>
+      <p class="intro-note journal-empty" id="journal-empty">First posts coming soon.</p>
+    </section>
+
+    <section class="filter-bar">
+      <div class="filter-buttons">
+        <button class="filter-button filter-button--active" data-filter="all">All</button>
+        <button class="filter-button" data-filter="outing">Outings</button>
+        <button class="filter-button" data-filter="food">Food</button>
+      </div>
+    </section>
+
+    <!-- Newest post first. One card per post; data-category is "outing" or "food". -->
+    <section class="blog-grid" aria-label="Journal posts">
+      <!-- POSTS -->
+    </section>
+  </main>
+
+  <script>
+    const cards = document.querySelectorAll('.journal-card');
+    if (cards.length) document.getElementById('journal-empty').remove();
+    else document.querySelector('.filter-bar').style.display = 'none';
+    document.querySelectorAll('.filter-button').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.filter-button').forEach(b => b.classList.remove('filter-button--active'));
+        btn.classList.add('filter-button--active');
+        const f = btn.dataset.filter;
+        cards.forEach(c => c.classList.toggle('hidden', f !== 'all' && c.dataset.category !== f));
+      });
+    });
+  </script>
+</body>
+</html>

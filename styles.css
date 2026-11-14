@@ -1288,3 +1288,162 @@ body.site-body {
     font-size: 1.3rem;
   }
 }
+
+/* ========================================
+   2026-11 SIMPLIFIED SITE: home lead photo, journal, captions
+   ======================================== */
+
+.home-lead {
+  display: block;
+  margin: 0 0 26px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.home-lead img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.home-lead__caption {
+  margin-top: 10px;
+  font-size: 0.82rem;
+  color: #6b6b6b;
+  text-align: right;
+  font-style: italic;
+}
+
+.section-label {
+  font-family: "Playfair Display", serif;
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin: 46px 0 0;
+}
+
+/* Journal cards show their title + date, unlike the old image-only blog cards */
+.journal-card {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.journal-card.hidden {
+  display: none;
+}
+
+.journal-card img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: var(--transition);
+}
+
+.journal-card:hover img {
+  opacity: 0.92;
+}
+
+.journal-card__tag {
+  display: block;
+  margin-top: 12px;
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--navy);
+}
+
+.journal-card__title {
+  font-family: "Playfair Display", serif;
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin: 4px 0 4px;
+}
+
+.journal-card__meta {
+  font-size: 0.82rem;
+  color: #6b6b6b;
+  margin: 0;
+}
+
+.journal-empty {
+  margin: 40px 0;
+  font-style: italic;
+  color: #6b6b6b;
+}
+
+/* Photo set inside a journal post */
+.post-photos {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin: 32px 0;
+}
+
+.post-photos figure {
+  margin: 0;
+}
+
+.post-photos figure.wide {
+  grid-column: 1 / -1;
+}
+
+.post-photos img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  cursor: pointer;
+  -webkit-user-drag: none;
+  user-select: none;
+}
+
+.post-photos figcaption {
+  font-size: 0.82rem;
+  color: #6b6b6b;
+  font-style: italic;
+  margin-top: 6px;
+}
+
+.lightbox__figure {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.lightbox__figure .lightbox__image {
+  max-height: 84vh;
+}
+
+.lightbox__caption {
+  margin-top: 12px;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.9rem;
+  text-align: center;
+  cursor: default;
+}
+
+.print-note {
+  margin: 36px 0 0;
+  font-size: 0.9rem;
+  color: #4a4a4a;
+  text-align: center;
+}
+
+.print-note a {
+  color: var(--navy);
+}
+
+@media (max-width: 640px) {
+  .post-photos {
+    grid-template-columns: 1fr;
+  }
+
+  .home-lead img {
+    aspect-ratio: 4 / 3;
+  }
+}

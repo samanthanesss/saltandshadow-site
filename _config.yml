@@ -1,0 +1,5 @@
+exclude:
+  - README.md
+  - BRANDING_GUIDE.md
+  - BRANDING_GUIDE.html
+  - journal-post-template.html
